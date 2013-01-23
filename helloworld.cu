@@ -1,0 +1,96 @@
+/* hello_world_cuda.cu
+   A CUDA C PROGRAM TO PRINT 'HELLO, WORLD!' TO THE SCREEN
+ 
+   TESTED SUCCESSFULLY WITH CUDA SDK 4.1.28 AND NVIDIA GPU DRIVER 
+   VERSION 290.10 RUNNING ON NVIDIA GeForce GTX 270
+ 
+   COMPILATION:
+   #1: NON-MAKEFILE APPROACH
+       nvcc -g hello_world_cuda.cu -o hello_world_cuda.x
+ 
+   #2. MAKEFILE APPROACH (USE THE ASSOCIATED Makefile)
+       make
+ 
+   EXECUTION:
+   ./hello_world_cuda.x
+ 
+   PORTIONS OF THE COMMENTS ARE ADOPTED FROM
+ 
+     NVIDIA CUDA C
+     PROGRAMMING GUIDE
+     VERSION 4.0 (5/6/2011)
+ 
+   FIRST WRITTEN: GOWTHAM; Mon, 13 Feb 2012 14:06:30 -0500
+   LAST MODIFIED: GOWTHAM; Mon, 13 Feb 2012 14:15:30 -0500
+*/
+ 
+/* STANDARD HEADERS AND DEFINITIONS 
+   REFERENCE: http://en.wikipedia.org/wiki/C_standard_library
+*/
+#include <stdio.h>  /* Core input/output operations                         */
+#include <stdlib.h> /* Conversions, random numbers, memory allocation, etc. */
+#include <math.h>   /* Common mathematical functions                        */
+#include <time.h>   /* Converting between various date/time formats         */
+#include <cuda.h>   /* CUDA related stuff                                   */
+ 
+ 
+/* KERNEL DEFINITION
+   CUDA C EXTENDS C BY ALLOWING THE PROGRAMMER TO DEFINE C FUNCTIONS,
+   CALLED KERNELS, THAT, WHEN CALLED, ARE EXECUTED N TIMES IN PARALLEL
+   BY N DIFFERENT CUDA THREADS, AS OPPOSED TO ONLY ONCE LIKE REGULAR
+   C FUNCTIONS
+ 
+   A KERNEL IS DEFINED USING THE __global__ DECLARATION SPECIFIER.
+   THE NUMBER OF CUDA THREADS THAT EXECUTE THAT KERNEL FOR A GIVEN
+   KERNEL CALL IS SPECIFIED USING <<< >>> (EXECUTION CONFIGURATION)
+   SYNTAX. EXECUTION CONFIGURATION DEFINES THE DIMENSION OF THE
+   GRIDS AND BLOCKS THAT WILL BE USED TO EXECUTE THE FUNCTION ON THE 
+   DEVICE AS WELL AS THE ASSOCIATED STREAM
+ 
+   EACH THREAD THAT EXECUTES THE KERNEL IS GIVEN A UNIQUE 'THREAD ID'
+   THAT IS ACCESSIBLE WITHIN THE KERNEL THROUGH THE BUILT-IN
+   threadIdx VARIABLE
+ 
+   A FUNCTION DECLARED AS
+ 
+     __global__ void Function(float* parameter);
+ 
+   MUST BE CALLED AS FOLLOWS:
+ 
+     Function<<< Dg, Db, Ns >>>(parameter);
+ 
+   WHERE
+ 
+   -- Dg : OF TYPE dim3, IT SPECIFIES THE DIMENSION AND SIZE OF THE GRID
+           SUCH THAT Dg.x * Dg.y * Dg.z EQUALS THE NUMBER OF BLOCKS BEING
+           LAUNCHED
+ 
+   -- Db : OF TYPE dim3, IT SPECIFIES THE DIMENSION AND SIZE OF EACH BLOCK
+           SUCH THAT Db.x * Db.y * Db.z EQUALS THE NUMBER OF THREADS PER
+           BLOCK
+ 
+   -- Ns : OF TYPE size_t, IT SPECIFIES THE NUMBER OF BYTES IN SHARED MEMORY
+           THAT IS DYNAMICALLY ALLOCATED PER BLOCK FOR THIS CALL IN ADDITION
+           TO THE STATICALLY ALLOCATED MEMORY. THIS DYNAMICALLY ALLOCATED
+           MEMORY IS USED BY ANY OF THE VARIABLES DECLARED AS AN EXTERNAL
+           ARRAY. NOTE THAT THIS IS AN OPTIONAL ARGUMENT THAT DEFAULTS TO 0
+ 
+   -- S  : OF TYPE cudaStream_t, IT SPECIFIES THE ASSOCIATED STREAM. THIS
+           TOO IS AN OPTIONAL ARGUMENT THAT DEFAULTS TO 0
+*/
+__global__ void kernel(void) {
+}
+ 
+/* MAIN PROGRAM BEGINS */
+int main(void) {
+ 
+  /* Dg = 1; Db = 1; Ns = 0; S = 0 */
+  kernel<<<10,64>>>();
+ 
+  /* PRINT 'HELLO, WORLD!' TO THE SCREEN */
+  printf("\n  Hello, World!\n\n");
+ 
+  /* INDICATE THE TERMINATION OF THE PROGRAM */
+  return 0;
+}
+/* MAIN PROGRAM ENDS */
