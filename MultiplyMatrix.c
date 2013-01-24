@@ -2,27 +2,31 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define ROWS 5
+#define COLS 10
+
+int MatrixA[ROWS][COLS];
+
 void genMatrix(int **matrix, int x, int y){
 
-int i, zarodek;
+int zarodek;
 zarodek= time(NULL);
 srand(zarodek); 
 
-for (int i = 0; i < x; ++i)
-{
-	for (int j = 0; j < y; ++j)
-	{
-		**matrix[x][y] = rand()%100;
-	}
+int i, j;
+	for(i = 0; i < x; i++)
+		{
+		for(j = 0; j < y; j++)
+			matrix[i][j] = 0;
+		}
 }
-}
-void printM(int Matrix[3][2], int x, int y){
+void printM(int **matrix, int x, int y){
 
 for (int i = 0; i < x; ++i)
 {
 	for (int j = 0; j < y; ++j)
 	{
-		printf("%i\n", Matrix[x][y]);
+		printf("%i\n", matrix[x][y]);
 	}
 }
 
@@ -32,11 +36,9 @@ int main(int argc, char const *argv[])
 {
 	
 	
+	genMatrix(&&MatrixA, ROWS,COLS);
 
-	int MatrixA[3][2];
-	genMatrix(&&MatrixA, 3,2);
-
-	printM(MatrixA,3,2);
+	printM(&&MatrixA,ROWS,COLS);
 
 	return 0;
 }
