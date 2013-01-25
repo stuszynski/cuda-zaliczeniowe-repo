@@ -207,12 +207,12 @@ W przypadku obliczeń na karcie graficznej została zastosowana funkcja cudaEven
 \section{Porównanie i~dyskusja wyników}
 
 \begin{figure}[H]
-  \caption{Wykres czasów.}
+  \caption{Wykres czasów. (ms/rozmiar)}
   \centering
     \includegraphics[width=1.2\textwidth]{wykres}
 \end{figure}
 
-Już na pierwszy rzut oka wyniki bardzo różnią się od siebie. W miarę postępowania badania i zwiększania ilości macierzy długość pracy CPU wzrastała niemal wykładniczo, gdy GPU zdawało się mniej opornie znosić coraz to większe macierze. Ma to związek także z faktem, że im wieksza macierz, tym większy porzytek ze zrównoleglenia zastosowanego w obliczeniach na GPU. Co ciekawe, średni iloraz różnicy w  prędkościach wynosił ~22x na korzyść GPU, niemal równo bo od 17-24 razy szybszy dla każdego punktu pomiaru.
+Już na pierwszy rzut oka wyniki bardzo różnią się od siebie. W miarę postępowania badania i zwiększania ilości macierzy długość pracy CPU wzrastała niemal wykładniczo, gdy GPU zdawało się mniej opornie znosić coraz to większe macierze. Ma to związek  z faktem, że im większy macierz, tym większy pożytek ze równoletnia zastosowanego w obliczeniach na GPU. Co ciekawe, średni iloraz różnicy w  prędkościach wynosił ~22x na korzyść GPU, niemal równo bo od 17-24 razy szybszy dla każdego punktu pomiaru.
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.22)  25 JAN 2013 19:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.22)  25 JAN 2013 19:26
 entering extended mode
  %&-line parsing enabled.
 **raport.tex
@@ -488,30 +488,26 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 212--213
  [][] 
  []
 
-[5] [6 <./wykres.jpg>] (./raport.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[5] [6 <./wykres.jpg>] (./raport.aux) ) 
 Here is how much of TeX's memory you used:
  2211 strings out of 495026
  25151 string characters out of 1181801
- 84332 words of memory out of 3000000
+ 84348 words of memory out of 3000000
  5374 multiletter control sequences out of 15000+50000
  10704 words of font info for 29 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
- 27i,7n,24p,563b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plme.enc}{/usr/share/texmf-texli
-ve/fonts/enc/dvips/pl/plms.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plr
-m.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texmf/f
-onts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/p
-ublic/pl/plex10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plmi12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/pl/plmi8.pfb></usr/share/texmf-tex
-live/fonts/type1/public/pl/plr12.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/pl/plsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy8.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm1440.pfb>
+ 27i,7n,24p,555b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvip
+s/pl/plme.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plms.enc}{/usr/share
+/texmf-texlive/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texmf-texlive/fonts/enc/
+dvips/pl/plmi.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
+usr/share/texmf-texlive/fonts/type1/public/pl/plex10.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/pl/plmi12.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/pl/plmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plr12.pfb></usr
+/share/texmf-texlive/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-texlive
+/fonts/type1/public/pl/plsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
 Output written on raport.pdf (6 pages, 138817 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
