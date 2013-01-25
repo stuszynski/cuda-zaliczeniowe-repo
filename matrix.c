@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "timers.h"
 
-#define ROWS 5
-#define COLS 8
+#define ROWS 500
+#define COLS 600
 
 // gcc matrix.c -lrt
 
@@ -93,10 +93,10 @@ int main(int argc, char const *argv[])
 
 	//oblicznia
 	generate();
-	printMA();
-	printMB();
+	//printMA();
+	//printMB();
 	multiply();
-	printMC();
+	//printMC();
 
 	//czas
 	stopTimer(czas);
